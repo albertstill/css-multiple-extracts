@@ -2,7 +2,11 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const themeOne = new ExtractTextPlugin({
-  filename: 'output.css',
+  filename: 'themeOne.css',
+});
+
+const themeTwo = new ExtractTextPlugin({
+  filename: 'themeTwo.css',
 });
 
 module.exports = {
@@ -43,9 +47,40 @@ module.exports = {
           ],
         }),
       },
+      {
+        test: /.css$/,
+        loader: themeTwo.extract({
+          use: [
+            {
+              loader: require.resolve('css-loader'),
+              options: {
+                importLoaders: 1,
+              },
+            },
+            {
+              loader: require.resolve('postcss-loader'),
+              options: {
+                ident: 'postcss',
+                plugins: loader => [
+                  require('postcss-cssnext')({
+                    features: {
+                      customProperties: {
+                        variables: {
+                          mainColor: 'red',
+                        },
+                      },
+                    },
+                  }),
+                ],
+              },
+            },
+          ],
+        }),
+      },
     ],
   },
   plugins: [
     themeOne,
+    themeTwo,
   ],
 };

@@ -3463,6 +3463,10 @@ ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
 
+multi-loader@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/multi-loader/-/multi-loader-0.1.0.tgz#2f0cc7438ec6e4a4ebc1a387015849b04f875f44"
+
 multimatch@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/multimatch/-/multimatch-2.1.0.tgz#9c7906a22fb4c02919e2f5f75161b4cdbd4b2a2b"
@@ -4497,6 +4501,10 @@ punycode@^1.2.4, punycode@^1.4.1:
 q@^1.1.2:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
+
+qs@^5.2.0:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-5.2.1.tgz#801fee030e0b9450d6385adc48a4cc55b44aedfc"
 
 qs@~6.4.0:
   version "6.4.0"
@@ -5708,6 +5716,12 @@ webpack-cli@^2.0.10:
     yargs "9.0.1"
     yeoman-environment "^2.0.0"
     yeoman-generator "github:ev1stensberg/generator#Feature-getArgument"
+
+webpack-combine-loaders@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/webpack-combine-loaders/-/webpack-combine-loaders-2.0.3.tgz#53a14a748fe998349f46eb22f078be23d9fd73e0"
+  dependencies:
+    qs "^5.2.0"
 
 webpack-sources@^1.0.1, webpack-sources@^1.1.0:
   version "1.1.0"

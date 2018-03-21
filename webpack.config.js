@@ -2,8 +2,8 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const multi = require('multi-loader');
 
-// turns object to webpack require string for use with multi-loader
-// it can't turn the postcss plugins function
+// turns webpack object loaders to the older require string format for use with multi-loader,
+// it can't stringify the postcss plugins function though
 const combineLoaders = require('webpack-combine-loaders');
 
 const themeOne = new ExtractTextPlugin({
